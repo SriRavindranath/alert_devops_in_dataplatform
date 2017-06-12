@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="row">
+        <div id="select_user" class="col-md-6"></div>
+        <div id="plugins_container" class="col-md-6">
+            <div id="select_plugin"><b><u>Plugins</u></b></div>
+            <div id="select_app"><b><u>Alert Policies</u></b></div>
+        </div>
+    </div>
+    <div id="updatable_items" style="display:none">
+        User: <input id="selected_user" type="text" size="35" style="margin-left:16px" readonly> </br>
+        Plugins: <input id="selected_plugin" type="text" size="60" readonly></br>
+    </div>
+    <input id="subscribe" type="button" value="Subscribe" class="btn btn-success"></input>
+{% endblock %}

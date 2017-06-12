@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {% for element in elements %}
+        {% if element[1] == "existing" %}
+            <li>{{element[0]}}</li>
+        {% else %}
+        <li>{{element[0]}}  <button type="submit" id="{{element[0]}}">New User; Add details</button></li>
+        {% endif %}
+    {% endfor %}
+    </br>
+    <div id="adding_new_user" style="display:none">
+        Email: <input type="email" id="new_user" placeholder="Enter email" readonly size=30></br>
+        Ph.No: <input type="text" id="ph_num" placeholder="Enter phone number" size="30"></br>
+        <button type="submit" id="create_new_user" class="btn btn-default">Submit</button>
+    </div>
+{% endblock %}

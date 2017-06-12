@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+                    <p><pre>Usage:
+ 1. Click on Subscribe on the left navigation bar to subscribe/unsubscribe
+   to a plugin's alerts.
+   To subscribe to a plugin alert:
+    - click on the radio button beside your email and then check the
+      plugins you are interested in
+    - click on subscribe button
+   To unsubscribe to a plugin alert:
+    - uncheck the plugin corresponding to your email
+    - click on subscribe button
+ 2. Similarly click on Users to manage users.
+ 3. And click on Plugins to list all plugins
+
+CLI:
+ List of all plugins:
+  curl http://localhost:8080/plugin\?plugin\=all\&type\=json
+ List of all users:
+  curl http://localhost:8080/plugin\?user\=all\&type\=json
+ List of plugins subscribed by an email:
+  curl http://localhost:8080/plugin\?user\=YOUR EMAIL ID\&type\=json
+ List of users subscribed to a plugin:
+  curl http://localhost:8080/plugin\?plugin\=PLUGIN\&type\=json
+ To subscribe to plugins:
+  curl -X POST -d "user=YOUR EMAIL ID" -d "plugin=mysl,ngx" localhost:8080/plugin
+					</pre></p>
+
+{% endblock %}
