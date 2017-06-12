@@ -1,0 +1,38 @@
+#user email to phone_number mapping
+users = {
+          "viresh.sanagoudar.com" : "PHONE_NUMBER"
+          "viresh.sanagoudar1.com" : "PHONE_NUMBER"
+          "viresh.sanagoudar2.com" : "PHONE_NUMBER"
+       }
+
+#list of plugin alerts you use in newrelic
+plugins = ["memcache", "redis", "mysql", "nginx", "apache"]
+
+#alerts having these filters are filtered out
+filters = ["ended"]
+
+#default user who receives all the alerts(SYS ADMIN)
+default = {
+            "viresh.sanagoudar" : "PHONE_NUMBER"
+          }
+#api to send a sms
+smsUrl = "ADD AN URL HERE, sms module will use this url to forward msgs"
+
+#additional params required to send an sms
+smsParams = {
+        'app' : 'android',
+        'other' : 'params'
+    }
+
+#bitly is used to shorten url
+bitly_access_token = "BITLY ACCESS TOKEN"
+
+#new relic app id
+newrelic_appid = "NEWRELIC APP ID"
+
+#path to static file(js,css etc)
+staticfiles_path = "/home/viresh_sanagoudar/newrelic_custom_alert/templates/"
+
+#host and port <- server listens here
+server_host = "0.0.0.0"
+server_port = "8080"
